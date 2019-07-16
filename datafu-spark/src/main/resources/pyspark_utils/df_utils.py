@@ -160,12 +160,12 @@ def activate():
     This technique taken from pymongo_spark
     https://github.com/mongodb/mongo-hadoop/blob/master/spark/src/main/python/pymongo_spark.py
     """
-    pyspark.sql.DataFrame.datafu.dedup_with_order = dedup_with_order
-    pyspark.sql.DataFrame.datafu.dedup_top_n = dedup_top_n
-    pyspark.sql.DataFrame.datafu.dedup_with_combiner = dedup_with_combiner
-    pyspark.sql.DataFrame.datafu.change_schema = change_schema
-    pyspark.sql.DataFrame.datafu.join_skewed = join_skewed
-    pyspark.sql.DataFrame.datafu.broadcast_join_skewed = broadcast_join_skewed
-    pyspark.sql.DataFrame.datafu.join_with_range = join_with_range
-    pyspark.sql.DataFrame.datafu.join_with_range_and_dedup = join_with_range_and_dedup
+    pyspark.sql.DataFrame.dedup_with_order = dedup_with_order
+    pyspark.sql.DataFrame.dedup_top_n = dedup_top_n
+    pyspark.sql.DataFrame.dedup_with_combiner = dedup_with_combiner
+    pyspark.sql.DataFrame.change_schema = change_schema
+    pyspark.sql.DataFrame.join_skewed = join_skewed
+    pyspark.sql.DataFrame.broadcast_join_skewed = broadcast_join_skewed
+    pyspark.sql.DataFrame.join_with_range = join_with_range
+    pyspark.sql.DataFrame.join_with_range_and_dedup = join_with_range_and_dedup
 
