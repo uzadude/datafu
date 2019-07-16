@@ -31,7 +31,7 @@ import org.apache.spark.storage.StorageLevel
  */
 class SparkDFUtilsBridge {
 
-  def dedup(df: DataFrame,
+  def dedupWithOrder(df: DataFrame,
             groupCol: Column,
             orderCols: JavaList[Column]): DataFrame = {
     val converted = convertJavaListToSeq(orderCols)
@@ -49,7 +49,7 @@ class SparkDFUtilsBridge {
                            orderCols = converted: _*)
   }
 
-  def dedup2(df: DataFrame,
+  def dedupWithCombiner(df: DataFrame,
              groupCol: Column,
              orderByCol: Column,
              desc: Boolean,
